@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
+    <!-- เพิ่มการเรียกฟอนต์ Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* รีเซ็ต CSS เบื้องต้น */
         * {
@@ -13,7 +15,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
             background-color: #fff;
             color: #333;
             display: flex;
@@ -53,7 +55,7 @@
         }
 
         .form-group label {
-            font-weight: bold;
+            font-weight: 500; /* ใช้น้ำหนักตัวหนังสือกลาง */
         }
 
         .form-group input {
@@ -104,7 +106,7 @@
 <body>
     <div class="register-container">
         <h1>Create new Account</h1>
-        <p>Already Registered? <a href="index.php">Log in here.</a></p>
+        <p>Already Registered? <a href="login.php">Log in here.</a></p>
         <form action="process_register.php" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>

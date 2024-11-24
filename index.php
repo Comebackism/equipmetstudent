@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <!-- เพิ่มการเรียกฟอนต์ Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* รีเซ็ต CSS เบื้องต้น */
         * {
@@ -13,7 +15,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
             background-color: #fff;
             color: #333;
             display: flex;
@@ -29,7 +31,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 600px; /* เพิ่มขนาดสูงสุด */
-            padding: 40px; /* เพิ่ม padding เพื่อให้ดูใหญ่ขึ้น */
+            padding: 50px; /* เพิ่ม padding เพื่อให้ดูใหญ่ขึ้น */
         }
 
         .login-container h1 {
@@ -41,6 +43,7 @@
         .login-container p {
             text-align: center;
             margin-bottom: 20px;
+            font-size: 18px; /* ขนาดข้อความใหญ่ขึ้น */
         }
 
         .login-container form {
@@ -49,16 +52,17 @@
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างช่องกรอก */
         }
 
         .form-group label {
-            font-weight: bold;
+            font-weight: 500; /* ปรับน้ำหนักฟอนต์ */
+            margin-bottom: 5px;
         }
 
         .form-group input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 5px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -66,8 +70,8 @@
         }
 
         .login-container button {
-            padding: 10px;
-            font-size: 16px;
+            padding: 15px; /* เพิ่มขนาดปุ่ม */
+            font-size: 18px;
             background-color: #f44336; /* ปุ่มสีแดง */
             color: #fff;
             border: none;
@@ -82,7 +86,11 @@
 
         .login-container .options {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
+        }
+
+        .login-container .options p {
+            font-size: 16px; /* ปรับขนาดข้อความ */
         }
 
         .login-container .options a {
@@ -96,7 +104,7 @@
 
         @media (max-width: 768px) {
             .login-container {
-                padding: 15px;
+                padding: 30px; /* ลด padding สำหรับหน้าจอเล็ก */
             }
         }
     </style>
@@ -117,8 +125,4 @@
             <button type="submit">Log In</button>
         </form>
         <div class="options">
-            <p><a href="#">Forgot Password?</a> | <a href="register.php">Sign up!</a></p>
-        </div>
-    </div>
-</body>
-</html>
+            <p><a href="#">Forgot Password?</a> | <a href="register.php">Sign up!</a></p
