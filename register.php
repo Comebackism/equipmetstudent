@@ -4,127 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
-    <!-- เพิ่มการเรียกฟอนต์ Kanit -->
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- เพิ่มฟอนต์ Kanit -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* รีเซ็ต CSS เบื้องต้น */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
-            background-color: #fff;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .register-container {
-            background-color: #fff;
-            border: 1px solid #f44336; /* ขอบสีแดง */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 600px; /* เพิ่มขนาดกล่อง */
-            padding: 40px;
-        }
-
-        .register-container h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            color: #f44336; /* สีแดง */
-        }
-
-        .register-container p {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .register-container form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            font-weight: 500; /* ใช้น้ำหนักตัวหนังสือกลาง */
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .register-container button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #f44336; /* ปุ่มสีแดง */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .register-container button:hover {
-            background-color: #d32f2f; /* ปุ่มสีแดงเข้มเมื่อ hover */
-        }
-
-        .register-container .options {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .register-container .options a {
-            text-decoration: none;
-            color: #f44336;
-        }
-
-        .register-container .options a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .register-container {
-                padding: 20px; /* ลด padding สำหรับหน้าจอเล็ก */
-            }
+            font-family: 'Kanit', sans-serif;
         }
     </style>
 </head>
-<body>
-    <div class="register-container">
-        <h1>Create new Account</h1>
-        <p>Already Registered? <a href="login.php">Log in here.</a></p>
-        <form action="process_register.php" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+<body class="bg-gradient-to-br from-red-300 to-red-600 min-h-screen flex items-center justify-center relative">
+    <!-- Background Shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="w-80 h-80 bg-white opacity-20 rounded-full absolute top-10 left-20"></div>
+        <div class="w-96 h-96 bg-white opacity-20 rounded-full absolute bottom-10 right-20"></div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="relative z-10 bg-white/90 backdrop-blur-md border border-red-400 shadow-2xl rounded-xl p-12 w-full max-w-2xl">
+        <h1 class="text-5xl font-bold text-red-500 text-center mb-6">Create Your Account</h1>
+        <p class="text-center text-gray-600 mb-8 text-lg">
+            Already Registered? 
+            <a href="index.php" class="text-red-500 font-medium hover:underline">Log in here</a>.
+        </p>
+        
+        <form action="process_register.php" method="POST" class="space-y-6">
+            <div>
+                <label for="name" class="block text-gray-700 font-semibold mb-2 text-lg">Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name"
+                    class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:ring-4 focus:ring-red-400 focus:outline-none"
+                    required>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div>
+                <label for="email" class="block text-gray-700 font-semibold mb-2 text-lg">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:ring-4 focus:ring-red-400 focus:outline-none"
+                    required>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div>
+                <label for="password" class="block text-gray-700 font-semibold mb-2 text-lg">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password"
+                    class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:ring-4 focus:ring-red-400 focus:outline-none"
+                    required>
             </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
+            <div>
+                <label for="dob" class="block text-gray-700 font-semibold mb-2 text-lg">Date of Birth</label>
+                <input 
+                    type="date" 
+                    id="dob" 
+                    name="dob"
+                    class="w-full p-4 border border-gray-300 rounded-lg text-lg focus:ring-4 focus:ring-red-400 focus:outline-none"
+                    required>
             </div>
-            <button type="submit">Sign up</button>
+            <button type="submit" class="w-full py-4 bg-gradient-to-r from-red-500 to-red-600 text-white text-lg font-bold rounded-lg shadow-lg hover:from-red-600 hover:to-red-700 transition-transform transform hover:scale-105">
+                Sign Up
+            </button>
         </form>
     </div>
 </body>
